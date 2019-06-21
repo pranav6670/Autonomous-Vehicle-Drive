@@ -5,7 +5,7 @@
 RF24 radio(7, 8); // CE, CSN
 const byte address[6] = "00001";
 // duration for output
-int time = 50;
+int time = 100;
 // initial command
 int command = 0;
 
@@ -13,7 +13,7 @@ void setup() {
   Serial.begin(115200);
   radio.begin();
   radio.openWritingPipe(address);
-  radio.setPALevel(RF24_PA_MIN);
+  radio.setPALevel(RF24_PA_MAX);
   radio.setChannel(10);
   radio.stopListening();
 }
@@ -50,9 +50,7 @@ void forward(int time) {
 void reverse(int time) {
   const char text[] = "reverse";
   radio.write(&text, sizeof(text));
-
 }
-
 
 void reset() {
   const char text[] = "stop";

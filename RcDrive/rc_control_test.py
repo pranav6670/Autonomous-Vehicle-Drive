@@ -10,7 +10,7 @@ class RCTest(object):
     def __init__(self):
         pygame.init()
         pygame.display.set_mode((250, 250))
-        self.ser = serial.Serial("/dev/ttyACM0", 115200, timeout=1)    # mac
+        self.ser = serial.Serial("/dev/ttyACM0", 115200, timeout=1)
         self.send_inst = True
         self.steer()
 

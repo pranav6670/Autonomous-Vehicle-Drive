@@ -17,7 +17,7 @@ void setup() {
   Serial.begin(115200);
   radio.begin();
   radio.openReadingPipe(0, address);
-  radio.setPALevel(RF24_PA_MIN);
+  radio.setPALevel(RF24_PA_MAX);
   radio.setChannel(10);
   radio.startListening();
   pinMode(in1, OUTPUT);
@@ -105,16 +105,4 @@ void headlight() {
     pixels1.show();
   }
 }
-//void noRadio() {
-//  for (int k = 0; k < 3; k++) {
-//    pixels.setPixelColor(k, pixels.Color(255, 255, 255));
-//    pixels.show();
-//  }
-//  delay(500);
-//  for (int k = 0; k < 3; k++) {
-//    pixels.setPixelColor(k, pixels.Color(0, 0, 0));
-//    pixels.show();
-//  }
-//  delay(500);
-//}
 
