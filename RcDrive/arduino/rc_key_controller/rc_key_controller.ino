@@ -5,7 +5,7 @@
 RF24 radio(7, 8); // CE, CSN
 const byte address[6] = "00001";
 // duration for output
-int time = 100;
+int time = 1;
 // initial command
 int command = 0;
 
@@ -17,7 +17,6 @@ void setup() {
   radio.setChannel(10);
   radio.stopListening();
 }
-
 void loop() {
   //receive command
   if (Serial.available() > 0) {
@@ -32,24 +31,25 @@ void loop() {
 void right(int time) {
   const char text[] = "right";
   radio.write(&text, sizeof(text));
-
+  delay(time);
 }
 
 void left(int time) {
   const char text[] = "left";
   radio.write(&text, sizeof(text));
-
+  delay(time);
 }
 
 void forward(int time) {
   const char text[] = "forward";
   radio.write(&text, sizeof(text));
-
+  delay(time);
 }
 
 void reverse(int time) {
   const char text[] = "reverse";
   radio.write(&text, sizeof(text));
+  delay(time);
 }
 
 void reset() {

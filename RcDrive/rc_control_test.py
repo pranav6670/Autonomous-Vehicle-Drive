@@ -44,6 +44,7 @@ class RCTest(object):
                         self.printtodisplay("Forward", 0, 50, 0)
                         self.ser.write(chr(1).encode())
 
+
                     elif key_input[pygame.K_DOWN]:
                         print("Reverse")
                         self.printtodisplay("Reverse", 50, 50, 50)
