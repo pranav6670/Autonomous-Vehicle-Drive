@@ -1,9 +1,8 @@
-__author__ = 'zhengwang'
+__author__ = 'Pranav'
 
 import serial
 import pygame
 from pygame.locals import *
-
 
 class RCTest(object):
 
