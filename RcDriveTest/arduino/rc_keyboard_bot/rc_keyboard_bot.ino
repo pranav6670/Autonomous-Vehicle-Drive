@@ -18,7 +18,8 @@ void setup() {
   radio.begin();
   radio.openReadingPipe(0, address);
   radio.setPALevel(RF24_PA_MAX);
-  radio.setChannel(10);
+  radio.setDataRate(RF24_2MBPS);
+  radio.setChannel(110);
   radio.startListening();
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
