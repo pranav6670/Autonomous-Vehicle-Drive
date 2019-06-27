@@ -79,62 +79,68 @@ class CollectTrainingData( object ):
                             key_input = pygame.key.get_pressed()
 
                             if key_input[pygame.K_UP]:
-                                print( "Forward" )
+                                print("Forward")
+                                self.printtodisplay("Forward", 0, 50, 0)
                                 saved_frame += 1
-                                X = np.vstack( (X , temp_array) )
-                                y = np.vstack( (y , self.k[2]) )
-                                self.ser.write( chr( 1 ).encode() )
+                                X = np.vstack((X, temp_array))
+                                y = np.vstack((y, self.k[2]))
+                                self.ser.write(chr(1).encode())
 
                             elif key_input[pygame.K_DOWN]:
-                                print( "Reverse" )
-                                self.ser.write( chr( 2 ).encode() )
+                                print("Reverse")
+                                self.printtodisplay("Reverse", 50, 50, 50)
+                                self.ser.write(chr(2).encode())
 
                             elif key_input[pygame.K_RIGHT]:
-                                print( "Right" )
-                                X = np.vstack( (X , temp_array) )
-                                y = np.vstack( (y , self.k[1]) )
+                                print("Right")
+                                self.printtodisplay("Right", 0, 50, 50)
+                                X = np.vstack((X, temp_array))
+                                y = np.vstack((y, self.k[1]))
                                 saved_frame += 1
-                                self.ser.write( chr( 3 ).encode() )
+                                self.ser.write(chr(3).encode())
 
                             elif key_input[pygame.K_LEFT]:
-                                print( "Left" )
-                                X = np.vstack( (X , temp_array) )
-                                y = np.vstack( (y , self.k[0]) )
+                                print("Left")
+                                self.printtodisplay("Left", 50, 0, 50)
+                                X = np.vstack((X, temp_array))
+                                y = np.vstack((y, self.k[0]))
                                 saved_frame += 1
-                                self.ser.write( chr( 4 ).encode() )
+                                self.ser.write(chr(4).encode())
 
                             elif key_input[pygame.K_x] or key_input[pygame.K_q]:
-                                print( "exit" )
+                                print("exit")
+                                self.printtodisplay("Quitting...", 0, 0, 0)
                                 self.send_inst = False
-                                self.ser.write( chr( 0 ).encode() )
+                                self.ser.write(chr(0).encode())
                                 self.ser.close()
                                 break
 
                         elif event.type == pygame.KEYUP:
-                            self.ser.write( chr( 0 ).encode() )
+                            self.ser.write(chr(0).encode())
+                            self.printtodisplay("Standby", 0, 0, 0)
 
-                    if cv2.waitKey( 1 ) & 0xFF == ord( 'q' ):
+                    if cv2.waitKey(1) & 0xFF == ord('q'):
                         break
 
             # save data as a numpy file
-            file_name = str( int( time.time() ) )
+            file_name = str(int(time.time()))
             directory = "training_data"
-            if not os.path.exists( directory ):
-                os.makedirs( directory )
+            if not os.path.exists(directory):
+                os.makedirs(directory)
             try:
-                np.savez( directory + '/' + file_name + '.npz' , train=X , train_labels=y )
+                np.savez(directory + '/' + file_name + '.npz' , train=X, train_labels=y)
             except IOError as e:
-                print( e )
+                print(e)
 
             end = cv2.getTickCount()
             # calculate streaming duration
-            print( "Streaming duration: , %.2fs" % ((end - start) / cv2.getTickFrequency()) )
+            print("Streaming duration:, %.2fs" % ((end - start) / cv2.getTickFrequency()))
 
-            print( X.shape )
-            print( y.shape )
-            print( "Total frame: " , total_frame )
-            print( "Saved frame: " , saved_frame )
-            print( "Dropped frame: " , total_frame - saved_frame )
+            print(X.shape)
+            print(y.shape)
+            print("Total frame: ", total_frame)
+            print("Saved frame: ", saved_frame)
+            print("Dropped frame: ", total_frame - saved_frame)
 
         finally:
             self.connection.close()
@@ -163,5 +169,5 @@ if __name__ == '__main__':
     # vector size, half of the image
     s = 120 * 320
 
-    ctd = CollectTrainingData( h , p , sp , s )
+    ctd = CollectTrainingData(h, p, sp, s)
     ctd.collect()
