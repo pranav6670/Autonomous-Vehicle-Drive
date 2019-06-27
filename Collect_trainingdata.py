@@ -31,7 +31,8 @@ class CollectTrainingData( object ):
             self.k[i , i] = 1
 
         pygame.init()
-        pygame.display.set_mode((250, 250))
+        self.screen = pygame.display.set_mode((200, 200))
+        pygame.display.set_caption('Collect Training Data')
 
     def collect(self):
 
@@ -138,6 +139,18 @@ class CollectTrainingData( object ):
         finally:
             self.connection.close()
             self.server_socket.close()
+
+
+    def printtodisplay(self, text, R, G, B):
+        self.text = text
+        self.R, self.G, self.B = R, G, B
+        font = pygame.font.Font(None, 50)
+        self.screen.fill ((self.R, self.G, self.B))
+        block = font.render(self.text, True, (255, 255, 255))
+        rect = block.get_rect()
+        rect.center = self.screen.get_rect().center
+        self.screen.blit(block, rect)
+        pygame.display.flip()
 
 
 if __name__ == '__main__':

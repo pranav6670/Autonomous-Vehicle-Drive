@@ -59,6 +59,7 @@ void forward() {
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
+  digitalWrite(14, HIGH);
   setcolor(0, 255, 0);
 }
 void reverse() {
@@ -67,6 +68,7 @@ void reverse() {
   digitalWrite(in2, HIGH);
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
+  digitalWrite(16, HIGH);
   setcolor(255, 255, 255);
 }
 void right() {
@@ -75,6 +77,8 @@ void right() {
   digitalWrite(in2, HIGH);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
+  digitalWrite(14, HIGH);
+  digitalWrite(15, HIGH);
   setcolor(0, 255, 255);
 }
 void left() {
@@ -83,6 +87,8 @@ void left() {
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
+  digitalWrite(16, HIGH);
+  digitalWrite(15, HIGH);
   setcolor(255, 0, 255);
 }
 void stop() {
@@ -91,6 +97,7 @@ void stop() {
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);
   digitalWrite(in4, LOW);
+  digitalWrite(15, HIGH);
   setcolor(255, 0, 0);
 }
 
