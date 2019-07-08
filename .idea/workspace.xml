@@ -13,7 +13,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Collect_trainingdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2242">
+            <state relative-caret-position="-404">
               <caret line="125" column="45" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -63,8 +63,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Myautocar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Myautocar" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,6 +269,7 @@
       <workItem from="1561616208321" duration="231000" />
       <workItem from="1561647203397" duration="1528000" />
       <workItem from="1561954054198" duration="6000" />
+      <workItem from="1562605290620" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="Driver updates">
       <created>1561116290537</created>
@@ -334,13 +345,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23543000" />
+    <option name="totallyTimeSpent" value="23595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29848486" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3030303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -469,7 +479,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Collect_trainingdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2242">
+        <state relative-caret-position="-404">
           <caret line="125" column="45" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
