@@ -11,11 +11,11 @@ A vehicle designed from scratch and driven autonomously using a MLP.
 
 ### Images 
 
-1. The remote:- 
+1. The remote (V-1.0):- 
 
 ![remote](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1457.jpg) 
 
-2. The bot:-
+2. The bot (V-1.0):-
 
 ![bot](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1461.jpg)
 
