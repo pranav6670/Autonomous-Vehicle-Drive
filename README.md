@@ -17,6 +17,6 @@ A vehicle designed from scratch and driven autonomously using a MLP.
 
 2. The bot (Ver 1.0):-
 
-![bot](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1461.jpg?raw=true)
+<img src="images/IMG-1464.jpg" height="400" alt="Screenshot"/> 
 
-![bot1](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1468.jpg?raw=true)
+<img src="images/IMG-1462.jpg" height="400" alt="Screenshot"/> 
