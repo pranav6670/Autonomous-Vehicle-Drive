@@ -17,6 +17,11 @@ A vehicle designed from scratch and driven autonomously using a MLP.
 
 2. The bot (Ver 1.0):-
 
-<img src="images/IMG-1464.jpg" height="400" alt="Screenshot"/> 
 
-<img src="images/IMG-1462.jpg" height="400" alt="Screenshot"/> 
+| col 1      | col 2   | 
+|------------|---------| 
+| <img src="images/IMG-1464.jpg" height="400" alt="Screenshot"/>  |<img src="images/IMG-1462.jpg" height="400" alt="Screenshot"/>  |
+
+
+
+
