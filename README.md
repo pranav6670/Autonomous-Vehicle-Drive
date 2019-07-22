@@ -13,10 +13,9 @@ A vehicle designed from scratch and driven autonomously using a MLP.
 
 1. The remote (Ver 1.0):- 
 
-![remote](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1457.jpg) 
-
+<img src="images/IMG-1457.jpg alt="Remote">
 2. The bot (Ver 1.0):-
 
-![bot](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1461.jpg)
+![bot](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1461.jpg?raw=true)
 
-![bot1](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1468.jpg)
+![bot1](https://github.com/pranav6670/Autonomous-Vehicle-Drive/blob/master/images/IMG-1468.jpg?raw=true)
