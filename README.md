@@ -1,6 +1,18 @@
 # Autonomous-Vehicle-Drive
 A vehicle designed from scratch and driven autonomously using a MLP.
 
+---
+
+## Methods/Hardware used
+
+1. Multilayer Perceptron
+2. Sockets for live streaming
+3. Microcontroller (Arduino for transmitter and receiver)
+4. RF communication (nRf24L01+ for wirelessly controlling the bot)
+5. CPU on the bot(Raspberry pi 3 and camera for video capturing)
+
+---
+
 ## File description
 
 ### Directory - /RcDriveTest
